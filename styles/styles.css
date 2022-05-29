@@ -21,7 +21,7 @@ html {
 /* Typograpgy */
 body {
   font-family: "Inter", sans-serif;
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   color: var(--color-primary);
   text-align: center;
 }
@@ -37,4 +37,114 @@ body {
 
 blockquote {
   font-weight: 300;
+}
+
+/* body */
+body {
+  background: url(/images/pattern-curve.svg) no-repeat 0px 100vh;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+/* Testimonial */
+.testimonial {
+  display: none;
+}
+
+.testimonial.active {
+  display: grid;
+  gap: 2.5rem;
+  margin: 5rem 3rem 0;
+  padding-bottom: 5rem;
+  place-items: center;
+}
+
+.testimonial.active > div {
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* Image section */
+.image {
+  position: relative;
+  background: url(/images/pattern-bg.svg) no-repeat;
+  background-size: 100%;
+}
+
+.image > img {
+  margin: 9%;
+  width: 75%;
+  box-shadow: 3px 40px 37px -13px rgb(0 0 0 / 28%);
+}
+
+/* Button */
+.button {
+  position: absolute;
+  display: flex;
+  gap: 3.5rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  left: 40%;
+  bottom: 6%;
+}
+
+.button > img {
+  cursor: pointer;
+}
+
+/* Quote block */
+blockquote {
+  margin: 0;
+  padding-top: 3rem;
+  background: url(/images/pattern-quotes.svg) no-repeat center top;
+  background-size: 90px;
+}
+
+/* Testimonial details */
+.details {
+  display: grid;
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    text-align: left;
+    font-size: 3.2rem;
+    background-position: 0 80vh;
+  }
+
+  /* Testimonial */
+  .testimonial.active {
+    grid-template-columns: repeat(2, 1fr);
+    /* margin-right: 10rem; */
+  }
+
+  /* Image section */
+  .image {
+    order: 2;
+  }
+
+  /* button */
+  .button {
+    left: 18%;
+  }
+
+  /* text */
+  blockquote,
+  .details {
+    background-position: 18% 0;
+    transform: translateX(30%);
+  }
+
+  .details {
+    font-size: 2rem;
+  }
+
+  /* Testimonial details */
+  .details {
+    display: flex;
+    gap: 1rem;
+  }
 }
