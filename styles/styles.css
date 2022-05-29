@@ -134,6 +134,7 @@ blockquote {
   /* text */
   blockquote,
   .details {
+    z-index: 54;
     background-position: 18% 0;
     transform: translateX(30%);
   }
